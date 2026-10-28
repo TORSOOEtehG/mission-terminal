@@ -1,0 +1,72 @@
+:root{
+  --fond:#010409; --surface:#0B111C; --trait:rgba(234,241,248,.12);
+  --clair:#EAF1F8; --gris:#93A1B2; --orange:#FA6C0D; --cyan:#11E0FB;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--fond); color:var(--clair);
+  font-family:'Poppins','Segoe UI',system-ui,sans-serif; line-height:1.6;
+}
+.top{
+  display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+  padding:16px 24px; border-bottom:1px solid var(--trait); background:var(--surface);
+}
+.brand{font-weight:800; font-size:20px; letter-spacing:.02em}
+.brand span{color:var(--orange)}
+.sub{color:var(--gris); font-size:14px}
+
+.zone{
+  display:grid; grid-template-columns:1fr; gap:22px; max-width:1200px;
+  margin:0 auto; padding:24px;
+}
+@media(min-width:900px){ .zone{ grid-template-columns:340px 1fr; align-items:start } }
+
+.panneau{
+  border:1px solid var(--trait); border-radius:16px; background:var(--surface);
+  padding:22px 24px;
+}
+.panneau h1{font-size:22px; margin:0 0 8px}
+.panneau h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em;
+  color:var(--cyan); margin:20px 0 8px}
+.intro{color:var(--clair); opacity:.85; margin:0}
+.panneau p{font-size:14.5px; color:var(--clair); opacity:.82}
+.cmd{list-style:none; margin:0; padding:0}
+.cmd li{font-size:14px; padding:5px 0; color:var(--clair); opacity:.85}
+code{font-family:'JetBrains Mono','Consolas',monospace; font-size:13px;
+  background:rgba(255,255,255,.06); color:var(--cyan); padding:1px 6px; border-radius:5px}
+.regle code{color:var(--orange)}
+.rappel{margin-top:18px; padding:12px 14px; border-radius:10px;
+  background:rgba(250,108,13,.1); border:1px solid rgba(250,108,13,.3);
+  font-size:14px; opacity:1}
+
+.termwrap{border:1px solid var(--trait); border-radius:16px; overflow:hidden;
+  background:#0B111C}
+.barre{display:flex; align-items:center; gap:8px; padding:10px 14px;
+  background:#0E1622; border-bottom:1px solid var(--trait)}
+.pt{width:11px; height:11px; border-radius:50%}
+.pt.r{background:#ff5f56}.pt.j{background:#ffbd2e}.pt.v{background:#27c93f}
+.barre .titre{margin-left:8px; color:var(--gris); font-size:13px;
+  font-family:'JetBrains Mono','Consolas',monospace}
+#term{height:70vh; min-height:440px; padding:10px 6px 6px 12px}
+.xterm{height:100%}
+
+/* carte de validation */
+.valider{max-width:1200px; margin:0 auto; padding:0 24px 40px}
+.vcard{border:1px solid var(--trait); border-radius:16px; background:var(--surface);
+  padding:22px 24px; transition:border-color .3s, box-shadow .3s}
+.vcard h2{font-size:18px; margin:0 0 6px}
+.vsub{font-size:14px; color:var(--clair); opacity:.8; margin:0 0 16px}
+#vform{display:flex; gap:12px; flex-wrap:wrap}
+#vinput{flex:1; min-width:220px; height:48px; padding:0 16px; border-radius:11px;
+  border:1px solid var(--trait); background:rgba(1,4,9,.6); color:var(--clair);
+  font-family:'JetBrains Mono','Consolas',monospace; font-size:15px}
+#vinput:focus{outline:none; border-color:var(--orange); box-shadow:0 0 0 3px rgba(250,108,13,.18)}
+#vform button{height:48px; padding:0 22px; border:0; border-radius:11px; cursor:pointer;
+  background:var(--orange); color:#fff; font-weight:700; font-size:15px;
+  font-family:inherit; box-shadow:0 8px 22px rgba(250,108,13,.28)}
+#vform button:hover{filter:brightness(1.07)}
+.vmsg{margin:14px 0 0; font-size:14.5px; min-height:1px; line-height:1.6}
+.vmsg.ok{color:#6EE7B7; font-weight:600}
+.vmsg.ko{color:#FCA5A5}
+.vcard.reussi{border-color:rgba(14,159,110,.55);
+  box-shadow:0 0 0 3px rgba(14,159,110,.15), 0 18px 50px rgba(14,159,110,.12)}
